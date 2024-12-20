@@ -3,12 +3,13 @@ import type { RemixBrowserProps, RemixServerProps } from '@remix-run/react';
 import { StrictMode, startTransition } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { renderToPipeableStream } from 'react-dom/server';
-import { PassThrough } from 'node:stream';
+import stream from 'node:stream';
 import type { EntryContext } from '@remix-run/node';
 import { createReadableStreamFromReadable } from '@remix-run/node';
 import { isbot } from 'isbot';
 import * as constants from "../utils/constants";
 
+const PassThrough = stream.PassThrough;
 export interface RemixProviderProps {
   type: 'Client' | 'Server';
   clientOptions?: RemixBrowserProps;

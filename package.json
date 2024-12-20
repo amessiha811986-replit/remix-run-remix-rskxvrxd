@@ -3,7 +3,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "npm run typecheck && remix vite:build",
+    "build": "npm run typecheck && vite build",
     "start": "vite dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "serve": "remix-serve ./build/server/index.js",
